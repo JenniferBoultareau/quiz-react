@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// Import only what you need from Bulma
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+@import '../node_modules/bulma/sass/base/_all.sass';
+@import '../node_modules/bulma/sass/elements/button.sass';
+@import '../node_modules/bulma/sass/elements/container.sass';
+@import '../node_modules/bulma/sass/elements/form.sass';
+@import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/components/navbar.sass';
+@import '../node_modules/bulma/sass/layout/hero.sass';
+@import '../node_modules/bulma/sass/layout/section.sass';
+@import '../node_modules/bulma/sass/elements/box.sass';
+@import '../node_modules/bulma/sass/grid/columns.sass';
+@import '../node_modules/bulma/sass/form/_all.sass';
+
+.background {
+  background: url('https://hacked.com/wp-content/uploads/2018/08/Glitch.jpg');
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+  height: 100vh;
+  width: 100vw;
+}
+
+@font-face {
+  font-family:"Doctor Glitch";
+  src:url("./Assets/Fonts/Doctor_Glitch/Doctor_Glitch.eot") format("eot"),
+  url("./Assets/Fonts/Doctor_Glitch/Doctor_Glitch.woff") format("woff"),
+  url("./Assets/Fonts/Doctor_Glitch/Doctor_Glitch.ttf") format("truetype"),
+  url("./Assets/Fonts/Doctor_Glitch/Doctor_Glitch.svg") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
