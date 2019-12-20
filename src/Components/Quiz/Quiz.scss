@@ -1,0 +1,19 @@
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .quiz-title {
+    font-family: "Doctor Glitch";
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .box {
+    width: 70%;
+  }
+}
+
+@import '../../App.scss';
