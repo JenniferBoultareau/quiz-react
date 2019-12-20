@@ -4,7 +4,7 @@ import './Quiz.scss';
 function Quiz() {
   return(
     <div>
-
+      hello
     </div>
   )
 }

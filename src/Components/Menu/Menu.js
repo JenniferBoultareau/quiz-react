@@ -5,56 +5,47 @@ import './Menu.scss'
 function Menu() {
   return (
     <div className="menu">
-      <div className="field">
-        <label className="menu-label has-text-white">Choisi un pseudo</label>
-        <div className="control">
-          <input className="input is-danger is-large" type="text" placeholder="test"/>
+
+      <p className="description-quiz has-text-white has-text-centered is-size-6-mobile">Quiz de 10 questions</p>
+      
+      <div className="columns is-vcentered field">
+        <div className="column is-half has-text-right has-text-centered-mobile">
+          <label className="menu-label has-text-white is-size-4-mobile">Choisi un pseudo</label>
+        </div>
+        <div className=" column is-half has-text-centered-mobile control">
+          <input className="input pseudo-input is-black is-medium" type="text" placeholder="test"/>
         </div>
       </div>
 
-      <div className="columns menu-select">
-        <div className="column">
-          <div class="field">
-            <div class="control">
-              <div class="select is-danger is-large">
-                <select>
-                  <option>Thème du quiz</option>
-                  <option>Art</option>
-                  <option>Géographie</option>
-                  <option>Histoire</option>
-                  <option>Mythologie</option>
-                  <option>Politique</option>
-                </select>
-              </div>
-            </div>
-          </div>
+      <div className="columns is-vcentered field">
+        <div className="column is-half has-text-right has-text-centered-mobile">
+          <label className="menu-label has-text-white is-size-4-mobile">Choisi un thème</label>
         </div>
-
-        <div className="column">
-          <div class="field">
-            <div class="control">
-              <div class="select is-danger is-large">
-                <select>
-                  <option>Nombre de questions</option>
-                  <option value='1'>1</option>
-                  <option value='2'>2</option>
-                  <option value='3'>3</option>
-                  <option value='4'>4</option>
-                  <option value='5'>5</option>
-                  <option value='6'>6</option>
-                  <option value='7'>7</option>
-                  <option value='8'>8</option>
-                  <option value='9'>9</option>
-                  <option value='10'>10</option>
-                </select>
-              </div>
-            </div>
+        <div className=" column is-half control has-text-centered-mobile">
+          <div className="select is-black is-medium">
+            <select>
+              <option>Thème du quiz</option>
+              <option>Art</option>
+              <option>Géographie</option>
+              <option>Histoire</option>
+              <option>Mythologie</option>
+              <option>Politique</option>
+            </select>
           </div>
         </div>
       </div>
 
-      <Link to='/menu'>
-        <p className="glitch" data-text="START">START</p>
+      <div className="columns is-vcentered">
+        <div className="column is-half has-text-right has-text-centered-mobile">
+          <label className="menu-label has-text-white is-size-4-mobile">Voir les scores</label>
+        </div>
+        <div className="column is-half has-text-centered-mobile">
+          <button className="button is-medium is-black is-inverted">SCORE</button>
+        </div>
+      </div>
+
+      <Link to='/quiz'>
+        <p className="glitch has-text-centered is-size-4-mobile" data-text="START">START</p>
       </Link>
     </div>
   );

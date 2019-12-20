@@ -5,9 +5,9 @@ import './Home.scss'
 function Home() {
   return (
     <div className="home">
-      <p className="home-title">Who want's to play ?</p>
+      <p className="home-title is-size-2-mobile">Who want's to play ?</p>
       <Link to='/menu'>
-        <p className="glitch" data-text="PLAY NOW">PLAY NOW</p>
+        <p className="glitch is-size-4-mobile" data-text="PLAY NOW">PLAY NOW</p>
       </Link>
     </div>
   );

@@ -1,21 +1,26 @@
 .menu {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   height: 100%;
+
+  .pseudo-input {
+    width: 300px;
+  }
 
   .menu-label {
     font-family: "Doctor Glitch";
     font-size: 30px;
   }
-  
-  .menu-select {
-    margin-top: 50px;
+
+  .description-quiz {
+    font-family: "Doctor Glitch";
+    font-size: 20px;
+  }
+
+  .glitch {
+    margin-top: 0;
   }
 }
-
-
 
 @import '../../App.scss';
