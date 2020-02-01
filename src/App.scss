@@ -16,7 +16,8 @@
 @import '../node_modules/bulma/sass/components/card.sass';
 
 .background {
-  background: url('https://hacked.com/wp-content/uploads/2018/08/Glitch.jpg');
+  // background: url('https://hacked.com/wp-content/uploads/2018/08/Glitch.jpg');
+  background-image: linear-gradient(90deg,#025d71,#1f447e 23.8%,#243d6a 51.96%,#cf6a6b);;
 	background-size: cover;
 	background-position: center;
 	z-index: 1;

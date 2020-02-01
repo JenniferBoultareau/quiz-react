@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Menu.scss'
+import { connect } from 'react-redux';
+import { editName } from '../../Actions/nameAction';
+import { editTheme } from '../../Actions/themeAction';
+import './Menu.scss';
 
-function Menu() {
+function Menu(props) {
+
+  const [name, setName] = useState('');
+  const [theme, setTheme] = useState('');
+
+  const start = () => {
+    props.dispatch(editName(name));
+    props.dispatch(editTheme(theme));
+  }
+
   return (
     <div className="menu">
 
@@ -13,7 +25,13 @@ function Menu() {
           <label className="menu-label has-text-white is-size-4-mobile">Choisi un pseudo</label>
         </div>
         <div className=" column is-half has-text-centered-mobile control">
-          <input className="input pseudo-input is-black is-medium" type="text" placeholder="test"/>
+          <input 
+            className="input pseudo-input is-black is-medium" 
+            type="text" 
+            placeholder="test"
+            value={name}
+            onChange={event => setName(event.target.value)}
+          />
         </div>
       </div>
 
@@ -23,13 +41,13 @@ function Menu() {
         </div>
         <div className=" column is-half control has-text-centered-mobile">
           <div className="select is-black is-medium">
-            <select>
+            <select value = {theme} onChange={event => setTheme(event.target.value)}>
               <option>Thème du quiz</option>
-              <option>Art</option>
-              <option>Géographie</option>
-              <option>Histoire</option>
-              <option>Mythologie</option>
-              <option>Politique</option>
+              <option value="Art">Art</option>
+              <option value="Géographie">Géographie</option>
+              <option value="Histoire">Histoire</option>
+              <option value="Mythologie">Mythologie</option>
+              <option value="Politique">Politique</option>
             </select>
           </div>
         </div>
@@ -45,10 +63,16 @@ function Menu() {
       </div>
 
       <Link to='/quiz'>
-        <p className="glitch has-text-centered is-size-4-mobile" data-text="START">START</p>
+        <p 
+          className="glitch has-text-centered is-size-4-mobile" 
+          data-text="START"
+          onClick={start}
+        >
+          START
+        </p>
       </Link>
     </div>
   );
 }
 
-export default Menu;
+export default connect()(Menu);

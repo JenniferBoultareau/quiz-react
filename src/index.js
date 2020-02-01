@@ -2,7 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 
 import './index.css';
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+import nameReducer from './Reducers/nameReducer';
+import themeReducer from './Reducers/themeReducer';
+
+const allReducers = combineReducers({
+  name: nameReducer,
+  theme: themeReducer,
+});
+
+const store = createStore(
+  allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+
+ReactDOM.render(
+    <Provider store = { store }>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>,
+  document.getElementById('root')
+);
